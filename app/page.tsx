@@ -33,7 +33,7 @@ export default function Home() {
           <div className="max-w-2xl">
             <h1 className="text-5xl font-bold leading-tight mb-4 text-gray-900">Hi, I'm Jan Granacher</h1>
             <p className="text-lg mb-8 text-gray-600">
-              currently exploring frontier ai and semiconductors.
+              currently exploring frontier ai and semiconductors
             </p>
             <div className="flex gap-4">
               <Link href="#contact">
