@@ -28,14 +28,14 @@ export default function Home() {
       </nav>
 
       {/* Hero Section - Clean design without background image */}
-      <section className="min-h-screen flex items-center bg-gray-50">
-        <div className="container mx-auto">
-          <div className="max-w-2xl">
+      <section className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center">
             <h1 className="text-5xl font-bold leading-tight mb-4 text-gray-900">Hi, I'm Jan Granacher</h1>
             <p className="text-lg mb-8 text-gray-600">
               currently exploring frontier ai and semiconductors
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center">
               <Link href="#contact">
                 <Button>
                   Contact Me <ArrowRight className="ml-2 h-4 w-4" />
@@ -52,7 +52,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12 text-center">About Me</h2>
           <div className="max-w-3xl mx-auto text-lg text-gray-700 space-y-6">
             <p>
-              I'm Jan Granacher, a 20-year-old entrepreneur originally from Germany. I'm passionate about the future of machine intelligence, its impact on macroeconomics and labor costs, impressionist art, and running.
+              I'm Jan Granacher, a 20-year-old entrepreneur originally hailing from Germany. I'm passionate about the future of machine intelligence, its impact on macroeconomics and labor costs, impressionist art, and running.
             </p>
             <p>
               This summer, I'll be joining Advanced Semiconductor Manufacturing International (ASMI) in the Netherlands,
