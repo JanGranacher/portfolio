@@ -9,7 +9,7 @@ export const metadata = {
   title: "Jan Granacher - AI Researcher & Entrepreneur",
   description:
     "Personal website of Jan Granacher, AI researcher and entrepreneur specializing in frontier AI and semiconductor technology.",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -20,9 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={vollkorn.className}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   )

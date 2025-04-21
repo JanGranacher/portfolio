@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       {/* Navigation */}
       <nav className="container mx-auto py-6 flex justify-between items-center">
         <div className="font-bold text-xl">Jan Granacher</div>
@@ -27,8 +27,8 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section - Clean design without background image */}
-      <section className="min-h-screen flex items-center justify-center bg-gray-50">
+      {/* Hero Section */}
+      <section className="min-h-screen flex items-center justify-center relative">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <h1 className="text-5xl font-bold leading-tight mb-4 text-gray-900">Hi, I'm Jan Granacher</h1>
@@ -44,6 +44,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="cloud-layer"></div>
       </section>
 
       {/* About Section */}
@@ -52,21 +53,21 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12 text-center">About Me</h2>
           <div className="max-w-3xl mx-auto text-lg text-gray-700 space-y-6">
             <p>
-              I'm Jan Granacher, a 20-year-old entrepreneur originally hailing from Germany. I'm passionate about the future of machine intelligence, its impact on macroeconomics and labor costs, impressionist art, and running.
+              I'm Jan Granacher, a 20-year-old entrepreneur originally hailing from Germany. I'm passionate about the future of machine intelligence, its impact on macroeconomics and labor costs, impressionist art, good books, and running.
             </p>
             <p>
               This summer, I'll be joining Advanced Semiconductor Manufacturing International (ASMI) in the Netherlands,
               where I'll be working on next-generation semiconductor technologies that power AI systems.
             </p>
             <p>
-              Beyond my technical work, I've successfully bootstrapped an AI consulting business to four-figure monthly recurring revenue, helping businesses implement practical AI solutions.
+              Beyond this, I've been helping clients in Paris, Boston and NYC implement AI tools.
             </p>
           </div>
         </div>
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 bg-gray-50">
+      <section id="experience" className="py-20">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Experience</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -119,7 +120,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-gray-50">
+      <section id="projects" className="py-20">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -130,14 +131,15 @@ export default function Home() {
               link="https://blackforestlabs.ai/announcing-the-flux-pro-finetuning-api/"
             />
             <ProjectCard
-              title="AI Hardware Optimization Research"
-              description="Explored methods for optimizing large language model inference on various hardware architectures, focusing on latency reduction and throughput improvement."
+              title="AI Hardware Optimization Research (Upcoming)"
+              description="Upcoming research project to explore methods for optimizing large language model inference on various hardware architectures, focusing on latency reduction and throughput improvement."
               tags={["AI", "Hardware", "Optimization"]}
             />
             <ProjectCard
               title="AI Consulting Platform"
               description="Built a platform to connect businesses with AI solutions tailored to their specific needs, focusing on practical applications of frontier AI technologies."
               tags={["AI", "Business", "Web Development"]}
+              link="https://www.waive.live/"
             />
           </div>
         </div>
@@ -147,7 +149,7 @@ export default function Home() {
       <section id="contact" className="py-20">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Get In Touch</h2>
-          <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
+          <div className="max-w-md mx-auto">
             <div className="flex flex-col space-y-6">
               <div className="flex items-center gap-4">
                 <Mail className="h-6 w-6 text-gray-600" />
@@ -177,42 +179,6 @@ export default function Home() {
                   @JanGranacher
                 </a>
               </div>
-            </div>
-            <div className="mt-8 pt-8 border-t">
-              <h3 className="text-xl font-semibold mb-4">Send me a message</h3>
-              <form className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-gray-300 focus:outline-none"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-gray-300 focus:outline-none"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-gray-300 focus:outline-none"
-                  ></textarea>
-                </div>
-                <Button className="w-full">Send Message</Button>
-              </form>
             </div>
           </div>
         </div>

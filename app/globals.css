@@ -3,18 +3,40 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, 
+    rgb(253, 231, 233) 0%,
+    rgb(220, 226, 239) 40%,
+    rgb(206, 212, 225) 100%
+  ) fixed;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.cloud-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.7) 40%,
+    rgba(255, 255, 255, 0.9)
+  );
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+@layer base {
+  html,
+  body {
+    @apply min-h-screen;
+    background-color: #e6f3ff;
   }
 }
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: #e6f3ff;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
@@ -33,11 +55,6 @@ body {
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
     --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -48,6 +65,7 @@ body {
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -82,13 +100,31 @@ body {
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
+
+  html {
+    min-height: 100%;
   }
+
+  body {
+    min-height: 100vh;
+    background-color: var(--background);
+    @apply text-foreground;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom styles outside of Tailwind layers */
+body {
+  min-height: 100vh;
+  background-color: var(--background);
 }
