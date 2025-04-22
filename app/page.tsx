@@ -56,7 +56,7 @@ export default function Home() {
               I'm Jan Granacher, a 20-year-old entrepreneur originally hailing from Germany. I'm passionate about the future of machine intelligence, its impact on macroeconomics and labor costs, impressionist art, good books, and running.
             </p>
             <p>
-              This summer, I'll be joining Advanced Semiconductor Manufacturing International (ASMI) in the Netherlands,
+              This summer, I'll be joining Advanced Semiconductor Materials International (ASMI) in the Netherlands,
               where I'll be working on next-generation semiconductor technologies that power AI systems.
             </p>
             <p>
@@ -185,19 +185,19 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto">
+      <footer className="water-footer py-12">
+        <div className="container mx-auto relative">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-xl font-bold mb-4 md:mb-0">Jan Granacher</div>
+            <div className="text-xl font-bold mb-4 md:mb-0 text-white/90">Jan Granacher</div>
             <div className="flex gap-6">
-              <a href="mailto:jangranacher1@gmail.com" className="hover:text-gray-300 transition-colors">
+              <a href="mailto:jangranacher1@gmail.com" className="text-white/80 hover:text-white/100 transition-colors">
                 <Mail className="h-5 w-5" />
               </a>
               <a
                 href="https://x.com/JanGranacher"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-300 transition-colors"
+                className="text-white/80 hover:text-white/100 transition-colors"
               >
                 <Twitter className="h-5 w-5" />
               </a>
@@ -205,13 +205,13 @@ export default function Home() {
                 href="https://linkedin.com/in/granacher"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-300 transition-colors"
+                className="text-white/80 hover:text-white/100 transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
           </div>
-          <div className="mt-8 text-center text-gray-400">
+          <div className="mt-8 text-center text-white/60">
             © {new Date().getFullYear()} Jan Granacher. All rights reserved.
           </div>
         </div>
