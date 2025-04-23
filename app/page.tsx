@@ -33,7 +33,7 @@ export default function Home() {
           <div className="max-w-2xl mx-auto text-center">
             <h1 className="text-5xl font-bold leading-tight mb-4 text-gray-900">Hi, I'm Jan Granacher</h1>
             <p className="text-lg mb-8 text-gray-600">
-              currently exploring frontier ai and semiconductors
+              poking around ai and chips
             </p>
             <div className="flex gap-4 justify-center">
               <Link href="#contact">
@@ -70,28 +70,55 @@ export default function Home() {
       <section id="experience" className="py-20">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Experience</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <ExperienceCard
-              title="DPO Curator"
-              company="Black Forest Labs"
-              subtitle={undefined}
-              period="Previous"
-              description="Worked at a Frontier AI Lab focusing on Data Curation and Direct Preference Optimization (DPO) for state-of-the-art image and video generative models."
-            />
-            <ExperienceCard
-              title="Upcoming Role"
-              company="Advanced Semiconductor Materials International (ASMI)"
-              subtitle={undefined}
-              period="Summer 2025"
-              description="Will be working on semiconductor technology in the Netherlands, contributing to next-generation manufacturing processes for AI hardware."
-            />
-            <ExperienceCard
-              title="Co-Founder"
-              company="wAIve LLC"
-              subtitle="AI consulting agency"
-              period=""
-              description="Bootstrapped an AI consulting business to 4-figure monthly recurring revenue, serving clients in Boston, Paris, and NYC with our latest models and agents."
-            />
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="p-8">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">DPO Curator</h3>
+                    <p className="text-lg text-gray-600 mt-1">Black Forest Labs</p>
+                  </div>
+                  <span className="mt-2 md:mt-0 px-4 py-1 rounded-full text-sm bg-gray-100 text-gray-700 inline-block">
+                    Previous
+                  </span>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Worked at a Frontier AI Lab focusing on Data Curation and Direct Preference Optimization (DPO) for state-of-the-art image and video generative models.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="p-8">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">Upcoming Role</h3>
+                    <p className="text-lg text-gray-600 mt-1">Advanced Semiconductor Materials International (ASMI)</p>
+                  </div>
+                  <span className="mt-2 md:mt-0 px-4 py-1 rounded-full text-sm bg-blue-50 text-blue-700 inline-block">
+                    Summer 2025
+                  </span>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Will be working on semiconductor technology in the Netherlands, contributing to next-generation manufacturing processes for AI hardware.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="p-8">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">Co-Founder</h3>
+                    <p className="text-lg text-gray-600 mt-1">wAIve LLC</p>
+                    <p className="text-sm text-gray-500 mt-1">AI consulting agency</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Bootstrapped an AI consulting business, serving clients in Boston, Paris, and NYC with our latest models and agents.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

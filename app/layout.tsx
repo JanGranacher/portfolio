@@ -6,9 +6,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 const vollkorn = Vollkorn({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Jan Granacher - AI Researcher & Entrepreneur",
+  title: "Jan Granacher",
   description:
-    "Personal website of Jan Granacher, AI researcher and entrepreneur specializing in frontier AI and semiconductor technology.",
+    "Personal website of Jan Granacher.",
   generator: 'v0.dev',
   viewport: {
     width: 'device-width',
