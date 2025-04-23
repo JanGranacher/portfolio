@@ -7,15 +7,15 @@ const vollkorn = Vollkorn({ subsets: ["latin"] })
 
 export const metadata = {
   title: "Jan Granacher",
-  description:
-    "Personal website of Jan Granacher.",
-  generator: 'v0.dev',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  }
+  description: "Personal website of Jan Granacher.",
+  generator: 'v0.dev'
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 }
 
 export default function RootLayout({

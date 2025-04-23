@@ -31,7 +31,7 @@ export default function Home() {
       <section className="min-h-screen flex items-center justify-center relative">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h1 className="text-5xl font-bold leading-tight mb-4 text-gray-900">Hi, I'm Jan Granacher</h1>
+            <h1 className="text-5xl font-bold leading-tight mb-4 text-gray-900">Jan Granacher</h1>
             <p className="text-lg mb-8 text-gray-600">
               poking around ai and chips
             </p>
