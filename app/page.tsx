@@ -56,7 +56,7 @@ export default function Home() {
               I'm Jan Granacher, a 20-year-old entrepreneur originally hailing from Germany. I'm passionate about the future of machine intelligence, its impact on macroeconomics and labor costs, impressionist art, good books, and running.
             </p>
             <p>
-              This summer, I'll be joining Advanced Semiconductor Materials International (ASMI) in the Netherlands,
+              This summer, I'll be joining Advanced Semiconductor Materials International in the Netherlands,
               where I'll be working on next-generation semiconductor technologies that power AI systems.
             </p>
             <p>
@@ -93,7 +93,7 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900">Upcoming Role</h3>
-                    <p className="text-lg text-gray-600 mt-1">Advanced Semiconductor Materials International (ASMI)</p>
+                    <p className="text-lg text-gray-600 mt-1">Advanced Semiconductor Materials International</p>
                   </div>
                   <span className="mt-2 md:mt-0 px-4 py-1 rounded-full text-sm bg-blue-50 text-blue-700 inline-block">
                     Summer 2025
