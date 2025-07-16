@@ -56,8 +56,7 @@ export default function Home() {
               I'm Jan Granacher, a 20-year-old entrepreneur originally hailing from Germany. I'm passionate about the future of machine intelligence, its impact on macroeconomics and labor costs, impressionist art, good books, and running.
             </p>
             <p>
-              This summer, I'll be joining Advanced Semiconductor Materials International in the Netherlands,
-              where I'll be working on next-generation semiconductor technologies that power AI systems.
+              This summer, I'll be joining Advanced Semiconductor Materials International in the Netherlands.
             </p>
             <p>
               Beyond this, I've been helping clients in Paris, Boston and NYC implement AI tools.
@@ -180,8 +179,8 @@ export default function Home() {
             <div className="flex flex-col space-y-6">
               <div className="flex items-center gap-4">
                 <Mail className="h-6 w-6 text-gray-600" />
-                <a href="mailto:jangranacher1@gmail.com" className="text-lg hover:underline">
-                  jangranacher1@gmail.com
+                <a href="mailto:jangranacher@college.harvard.edu" className="text-lg hover:underline">
+                  jangranacher@college.harvard.edu
                 </a>
               </div>
               <div className="flex items-center gap-4">
@@ -217,7 +216,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-xl font-bold mb-4 md:mb-0 text-white/90">Jan Granacher</div>
             <div className="flex gap-6">
-              <a href="mailto:jangranacher1@gmail.com" className="text-white/80 hover:text-white/100 transition-colors">
+              <a href="mailto:jangranacher@college.harvard.edu" className="text-white/80 hover:text-white/100 transition-colors">
                 <Mail className="h-5 w-5" />
               </a>
               <a
