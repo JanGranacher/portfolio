@@ -91,6 +91,7 @@ body {
   body {
     @apply min-h-screen;
     background-color: #e6f3ff;
+    font-family: Georgia, serif;
   }
 }
 
@@ -173,7 +174,7 @@ body {
     min-height: 100vh;
     background-color: var(--background);
     @apply text-foreground;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, serif;
   }
 }
 
@@ -187,4 +188,5 @@ body {
 body {
   min-height: 100vh;
   background-color: var(--background);
+  font-family: Georgia, serif;
 }

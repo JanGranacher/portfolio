@@ -1,252 +1,42 @@
+'use client'
+
 import Link from "next/link"
 import { ArrowRight, ExternalLink, Linkedin, Mail, Twitter, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import React, { useRef, useEffect, useState } from "react"
+import './page.css'
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      {/* Navigation */}
-      <nav className="container mx-auto py-6 flex justify-between items-center">
-        <div className="font-bold text-xl">Jan Granacher</div>
-        <div className="flex gap-6">
-          <Link href="#about" className="hover:text-gray-600 transition-colors">
-            About
-          </Link>
-          <Link href="#experience" className="hover:text-gray-600 transition-colors">
-            Experience
-          </Link>
-          <Link href="#education" className="hover:text-gray-600 transition-colors">
-            Education
-          </Link>
-          <Link href="#projects" className="hover:text-gray-600 transition-colors">
-            Projects
-          </Link>
-          <Link href="#contact" className="hover:text-gray-600 transition-colors">
-            Contact
-          </Link>
-        </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <h1 className="text-5xl font-bold leading-tight mb-4 text-gray-900">Jan Granacher</h1>
-            <p className="text-lg mb-8 text-gray-600">
-              poking around ai and chips
-            </p>
-            <div className="flex gap-4 justify-center">
-              <Link href="#contact">
-                <Button>
-                  Contact Me <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+    <div className="min-h-screen bg-[#e6f3ff] flex justify-center">
+      <NavMenu />
+      <div className="bg-white border border-gray-300 shadow-sm max-w-2xl w-full mt-12 mb-12 px-10 py-12 text-[15px] text-left" style={{ fontFamily: 'Baskerville, Georgia, serif', fontWeight: 700 }}>
+        <RevealOnScroll>
+          <div id="bio" className="mb-8">
+            <blockquote className="mb-4" style={{ fontVariant: 'small-caps', fontStyle: 'italic', letterSpacing: '0.1em', textAlign: 'center', fontSize: '0.85em', color: 'rgba(0,0,0,0.6)', fontFamily: 'IM Fell English, Georgia, serif', fontWeight: 700 }}>“the future belongs to the quietly curious.”</blockquote>
+            <div className="font-bold mb-10 mt-8 text-left" style={{ fontFamily: 'Baskerville, Georgia, serif', fontSize: '1.5rem', letterSpacing: '0.01em', fontVariant: 'small-caps', fontWeight: 800 }}>J. Granacher</div>
+            <ul className="mb-6 list-disc list-inside space-y-5 text-[0.7rem] bio-list" style={{ letterSpacing: '0.02em', fontFamily: 'Times New Roman, Times, serif', color: '#111' }}>
+              <style>{`.bio-list a { color: #111 !important; text-decoration: underline; }`}</style>
+              <li>CS &amp; Economics @ Harvard College </li>
+              <li>UWC Atlantic '23</li>
+              <li>Direct Preference Optimization Curation, <a href="https://bfl.ai/" className="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Black Forest Labs</a></li>
+              <li>Co‑Founder, <a href="https://waive.live" className="text-blue-700 underline" target="_blank" rel="noopener noreferrer">wAIve LLC</a></li>
+              <li>Co-Author, <a href="https://blackforestlabs.ai/announcing-the-flux-pro-finetuning-api/" className="text-blue-700 underline" target="_blank" rel="noopener noreferrer">FLUX Pro API Guide</a></li>
+              <li>Built peer analysis model of semiconductor industry for <a href="https://www.asm.com/" className="text-blue-700 underline" target="_blank" rel="noopener noreferrer">ASMI</a></li>
+            </ul>
           </div>
-        </div>
-        <div className="cloud-layer"></div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-20">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">About Me</h2>
-          <div className="max-w-3xl mx-auto text-lg text-gray-700 space-y-6">
-            <p>
-              I'm Jan Granacher, a 20-year-old entrepreneur originally hailing from Germany. I'm passionate about the future of machine intelligence, its impact on macroeconomics and labor costs, impressionist art, good books, and running.
-            </p>
-            <p>
-              This summer, I'll be joining Advanced Semiconductor Materials International in the Netherlands.
-            </p>
-            <p>
-              Beyond this, I've been helping clients in Paris, Boston and NYC implement AI tools.
-            </p>
+        </RevealOnScroll>
+        <RevealOnScroll>
+          <div id="contact">
+            <div className="mt-16 text-center text-sm" style={{ fontFamily: 'Times New Roman, Times, serif', color: '#111' }}>✉  jangranacher@college.harvard.edu</div>
           </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section id="experience" className="py-20">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Experience</h2>
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="p-8">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900">DPO Curator</h3>
-                    <p className="text-lg text-gray-600 mt-1">Black Forest Labs</p>
-                  </div>
-                  <span className="mt-2 md:mt-0 px-4 py-1 rounded-full text-sm bg-gray-100 text-gray-700 inline-block">
-                    Previous
-                  </span>
-                </div>
-                <p className="text-gray-700 leading-relaxed">
-                  Worked at a Frontier AI Lab focusing on Data Curation and Direct Preference Optimization (DPO) for state-of-the-art image and video generative models.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="p-8">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900">Upcoming Role</h3>
-                    <p className="text-lg text-gray-600 mt-1">Advanced Semiconductor Materials International</p>
-                  </div>
-                  <span className="mt-2 md:mt-0 px-4 py-1 rounded-full text-sm bg-blue-50 text-blue-700 inline-block">
-                    Summer 2025
-                  </span>
-                </div>
-                <p className="text-gray-700 leading-relaxed">
-                  Will be working on semiconductor technology in the Netherlands, contributing to next-generation manufacturing processes for AI hardware.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="p-8">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900">Co-Founder</h3>
-                    <p className="text-lg text-gray-600 mt-1">wAIve LLC</p>
-                    <p className="text-sm text-gray-500 mt-1">AI consulting agency</p>
-                  </div>
-                </div>
-                <p className="text-gray-700 leading-relaxed">
-                  Bootstrapped an AI consulting business, serving clients in Boston, Paris, and NYC with our latest models and agents.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Education Section */}
-      <section id="education" className="py-20">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Education</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <EducationCard
-              institution="Babson College"
-              location="Boston, MA"
-              degree="Weissman Scholar"
-              period="Current"
-              description="Studying entrepreneurship and technology at one of the world's leading institutions for business education as a Weissman Scholar."
-            />
-            <EducationCard
-              institution="UWC Atlantic College"
-              location="Cardiff, Wales"
-              degree="International Baccalaureate"
-              period="Previous"
-              description="Completed the International Baccalaureate diploma at the founding United World College, focusing on math & economics."
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="py-20">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <ProjectCard
-              title="Technical Guide: FLUX Pro Fine-tuning API"
-              description="Contributed to comprehensive documentation for Black Forest Labs' FLUX Pro fine-tuning API, enabling developers to create custom AI models."
-              tags={["AI", "Documentation", "Fine-tuning"]}
-              link="https://blackforestlabs.ai/announcing-the-flux-pro-finetuning-api/"
-            />
-            <ProjectCard
-              title="AI Hardware Optimization Research (Upcoming)"
-              description="Upcoming research project to explore methods for optimizing large language model inference on various hardware architectures, focusing on latency reduction and throughput improvement."
-              tags={["AI", "Hardware", "Optimization"]}
-            />
-            <ProjectCard
-              title="AI Consulting Platform"
-              description="Built a platform to connect businesses with AI solutions tailored to their specific needs, focusing on practical applications of frontier AI technologies."
-              tags={["AI", "Business", "Web Development"]}
-              link="https://www.waive.live/"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Get In Touch</h2>
-          <div className="max-w-md mx-auto">
-            <div className="flex flex-col space-y-6">
-              <div className="flex items-center gap-4">
-                <Mail className="h-6 w-6 text-gray-600" />
-                <a href="mailto:jangranacher@college.harvard.edu" className="text-lg hover:underline">
-                  jangranacher@college.harvard.edu
-                </a>
-              </div>
-              <div className="flex items-center gap-4">
-                <Linkedin className="h-6 w-6 text-gray-600" />
-                <a
-                  href="https://linkedin.com/in/granacher"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-lg hover:underline"
-                >
-                  linkedin.com/in/granacher
-                </a>
-              </div>
-              <div className="flex items-center gap-4">
-                <Twitter className="h-6 w-6 text-gray-600" />
-                <a
-                  href="https://x.com/JanGranacher"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-lg hover:underline"
-                >
-                  @JanGranacher
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="water-footer py-12">
-        <div className="container mx-auto relative">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-xl font-bold mb-4 md:mb-0 text-white/90">Jan Granacher</div>
-            <div className="flex gap-6">
-              <a href="mailto:jangranacher@college.harvard.edu" className="text-white/80 hover:text-white/100 transition-colors">
-                <Mail className="h-5 w-5" />
-              </a>
-              <a
-                href="https://x.com/JanGranacher"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/80 hover:text-white/100 transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="https://linkedin.com/in/granacher"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/80 hover:text-white/100 transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
-          </div>
-          <div className="mt-8 text-center text-white/60">
-            © {new Date().getFullYear()} Jan Granacher. All rights reserved.
-          </div>
-        </div>
-      </footer>
+        </RevealOnScroll>
+      </div>
     </div>
   )
 }
 
-function ExperienceCard({ title, company, subtitle, period, description }) {
+function ExperienceCard({ title, company, subtitle, period, description }: { title: string; company: string; subtitle?: string; period: string; description: string }) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
       <h3 className="text-xl font-semibold">{title}</h3>
@@ -258,9 +48,9 @@ function ExperienceCard({ title, company, subtitle, period, description }) {
   )
 }
 
-function EducationCard({ institution, location, degree, period, description }) {
+function EducationCard({ institution, location, degree, period, description, small }: { institution: string; location: string; degree: string; period: string; description: string; small?: boolean }) {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+    <div className="bg-white p-4 rounded-md shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
       <h3 className="text-xl font-semibold">{institution}</h3>
       <div className="flex items-center text-gray-500 text-sm mt-1">
         <MapPin className="h-4 w-4 mr-2" />
@@ -273,7 +63,7 @@ function EducationCard({ institution, location, degree, period, description }) {
   )
 }
 
-function ProjectCard({ title, description, tags, link }) {
+function ProjectCard({ title, description, tags, link }: { title: string; description: string; tags: string[]; link?: string }) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
       <h3 className="text-xl font-semibold">{title}</h3>
@@ -294,6 +84,65 @@ function ProjectCard({ title, description, tags, link }) {
             {tag}
           </span>
         ))}
+      </div>
+    </div>
+  )
+}
+
+// RevealOnScroll: fade/slide in when in viewport
+function RevealOnScroll({ children }: { children: React.ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const isSSR = typeof window === 'undefined'
+  const [visible, setVisible] = useState(isSSR)
+  useEffect(() => {
+    if (isSSR) return
+    const node = ref.current
+    if (!node) return
+    const observer = new window.IntersectionObserver(
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.15 }
+    )
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [])
+  return (
+    <div
+      ref={ref}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? 'none' : 'translateY(24px)',
+        transition: 'opacity 0.3s ease, transform 0.3s ease'
+      }}
+    >
+      {children}
+    </div>
+  )
+}
+
+function NavMenu() {
+  const [open, setOpen] = React.useState(false)
+  return (
+    <div className="fixed top-6 left-6 z-20 flex flex-col items-center select-none">
+      <button
+        aria-label="Open navigation"
+        className="flex flex-col items-center justify-center cursor-pointer group min-w-[56px] min-h-[56px]"
+        onClick={() => setOpen((v) => !v)}
+        onBlur={() => setOpen(false)}
+        style={{ background: 'none', border: 'none', padding: 0 }}
+      >
+        {!open ? (
+          <span className="block">
+            <img src="/png-great-gatsby-hat-logo.png" alt="JG Monogram Logo" style={{ width: 56, height: 56, borderRadius: '50%', display: 'block', objectFit: 'cover' }} />
+          </span>
+        ) : (
+          <span className="px-4 py-2 rounded-full bg-white border border-gray-300 shadow font-bold text-[1.1rem] text-black transition-all duration-300" style={{ fontFamily: 'Baskerville, Georgia, serif', letterSpacing: '0.01em' }}>
+            J. Granacher
+          </span>
+        )}
+      </button>
+      <div className={`transition-all duration-300 overflow-hidden ${open ? 'max-h-60 opacity-100 mt-2' : 'max-h-0 opacity-0'} bg-white border border-gray-300 rounded shadow-md w-32 flex flex-col items-center`}>
+        <a href="#bio" className="py-2 w-full text-center hover:bg-gray-100 underline-animate" onClick={() => setOpen(false)}>Bio</a>
+        <a href="#contact" className="py-2 w-full text-center hover:bg-gray-100 underline-animate" onClick={() => setOpen(false)}>Contact</a>
       </div>
     </div>
   )
