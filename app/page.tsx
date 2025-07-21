@@ -8,31 +8,31 @@ import './page.css'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#e6f3ff] flex justify-center">
-      <NavMenu />
-      <div className="bg-white border border-gray-300 shadow-sm max-w-2xl w-full mt-12 mb-12 px-10 py-12 text-[15px] text-left" style={{ fontFamily: 'Baskerville, Georgia, serif', fontWeight: 700 }}>
+    <>
+      <div className="min-h-screen flex justify-center" style={{ background: '#fff' }}>
+        <NavMenu />
         <RevealOnScroll>
-          <div id="bio" className="mb-8">
-            <blockquote className="mb-4" style={{ fontVariant: 'small-caps', fontStyle: 'italic', letterSpacing: '0.1em', textAlign: 'center', fontSize: '0.85em', color: 'rgba(0,0,0,0.6)', fontFamily: 'IM Fell English, Georgia, serif', fontWeight: 700 }}>“the future belongs to the quietly curious.”</blockquote>
-            <div className="font-bold mb-10 mt-8 text-left" style={{ fontFamily: 'Baskerville, Georgia, serif', fontSize: '1.5rem', letterSpacing: '0.01em', fontVariant: 'small-caps', fontWeight: 800 }}>J. Granacher</div>
-            <ul className="mb-6 list-disc list-inside space-y-5 text-[0.7rem] bio-list" style={{ letterSpacing: '0.02em', fontFamily: 'Times New Roman, Times, serif', color: '#111' }}>
-              <style>{`.bio-list a { color: #111 !important; text-decoration: underline; }`}</style>
-              <li>CS &amp; Economics @ Harvard College </li>
-              <li>UWC Atlantic '23</li>
-              <li>Direct Preference Optimization Curation, <a href="https://bfl.ai/" className="text-blue-700 underline" target="_blank" rel="noopener noreferrer">Black Forest Labs</a></li>
-              <li>Co‑Founder, <a href="https://waive.live" className="text-blue-700 underline" target="_blank" rel="noopener noreferrer">wAIve LLC</a></li>
-              <li>Co-Author, <a href="https://blackforestlabs.ai/announcing-the-flux-pro-finetuning-api/" className="text-blue-700 underline" target="_blank" rel="noopener noreferrer">FLUX Pro API Guide</a></li>
-              <li>Built peer analysis model of semiconductor industry for <a href="https://www.asm.com/" className="text-blue-700 underline" target="_blank" rel="noopener noreferrer">ASMI</a></li>
+          <div id="bio" className="mb-8" style={{ width: '100%', maxWidth: '700px', margin: '0 auto', padding: '48px 0 0 0' }}>
+            <div className="mb-8 text-left" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '2.5rem' }}>Jan Granacher</div>
+            <div className="mb-8 text-left" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '1rem' }}>
+              A few things about me:
+            </div>
+            <ul style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '1rem', marginLeft: '1.5em', marginBottom: '2em', listStyleType: 'disc' }}>
+              <li className="mb-3">Grew up in Germany.</li>
+              <li className="mb-3">Went to UWC Atlantic in Wales.</li>
+              <li className="mb-3">Now study economics at Harvard.</li>
+              <li className="mb-3">Co-founded <a href="https://waive.live" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">wAIve LLC</a>.</li>
+              <li className="mb-3">Worked on DPO Curation at <a href="https://bfl.ai/" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">Black Forest Labs</a> and helped with <a href="https://bfl.ai/announcements/25-01-16-finetuning" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">this</a>.</li>
+              <li className="mb-3">Researched the semiconductor industry for <a href="https://www.asm.com/" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">ASMI</a>.</li>
+              <li className="mb-3">I also enjoy running, impressionist art and books.</li>
             </ul>
           </div>
         </RevealOnScroll>
-        <RevealOnScroll>
-          <div id="contact">
-            <div className="mt-16 text-center text-sm" style={{ fontFamily: 'Times New Roman, Times, serif', color: '#111' }}>✉  jangranacher@college.harvard.edu</div>
-          </div>
-        </RevealOnScroll>
       </div>
-    </div>
+      <div className="w-full text-center mt-8 mb-8" style={{ color: '#000', fontFamily: 'Georgia, serif', fontWeight: 500, fontSize: '1rem', position: 'absolute', left: 0, right: 0, bottom: 0 }}>
+        jangranacher@college.harvard.edu
+      </div>
+    </>
   )
 }
 
@@ -92,10 +92,8 @@ function ProjectCard({ title, description, tags, link }: { title: string; descri
 // RevealOnScroll: fade/slide in when in viewport
 function RevealOnScroll({ children }: { children: React.ReactNode }) {
   const ref = useRef<HTMLDivElement>(null)
-  const isSSR = typeof window === 'undefined'
-  const [visible, setVisible] = useState(isSSR)
+  const [visible, setVisible] = useState(false)
   useEffect(() => {
-    if (isSSR) return
     const node = ref.current
     if (!node) return
     const observer = new window.IntersectionObserver(
