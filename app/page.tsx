@@ -11,21 +11,27 @@ export default function Home() {
     <>
       <div className="min-h-screen flex flex-col items-center justify-between" style={{ background: '#fff' }}>
         <NavMenu />
-        <div className="flex flex-1 flex-col items-center justify-center w-full" style={{ minHeight: '70vh' }}>
+        <div className="flex flex-1 flex-col items-center w-full px-2" style={{ minHeight: '60vh' }}>
+          <style jsx>{`
+            @media (max-width: 600px) {
+              .bio-header { font-size: 1.5rem !important; margin-bottom: 1.5rem !important; }
+              .bio-subtitle { font-size: 0.95rem !important; margin-bottom: 1rem !important; margin-top: 0.5rem !important; }
+              .bio-list { font-size: 0.95rem !important; padding-left: 1.1em !important; }
+              .bio-list li { margin-bottom: 0.7em !important; }
+            }
+          `}</style>
           <RevealOnScroll>
-            <div id="bio" className="mb-8">
-              <div className="mb-16 text-center" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '2.5rem' }}>Jan Granacher</div>
-              <div className="mt-8 mb-8 text-center" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '0.85rem' }}>
-                A few things about me:
-              </div>
-              <ul style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '0.85rem', margin: '0 auto 2em auto', listStyleType: 'disc', maxWidth: 400, textAlign: 'left' }} className="text-center">
-                <li className="mb-3">Grew up in Germany.</li>
-                <li className="mb-3">Went to UWC Atlantic in Wales.</li>
-                <li className="mb-3">Now study economics at Harvard.</li>
-                <li className="mb-3">Co-founded <a href="https://waive.live" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">wAIve LLC</a>.</li>
-                <li className="mb-3">Worked on DPO Curation at <a href="https://bfl.ai/" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">Black Forest Labs</a> and helped with <a href="https://bfl.ai/announcements/25-01-16-finetuning" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">this</a>.</li>
-                <li className="mb-3">Researched the semiconductor industry for <a href="https://www.asm.com/" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">ASMI</a>.</li>
-                <li className="mb-3">I also enjoy running, impressionist art and books.</li>
+            <div id="bio" className="mb-8" style={{ width: '100%', maxWidth: 400, margin: '0 auto' }}>
+              <div className="bio-header mb-10 text-center" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '2.2rem', lineHeight: 1.1 }}>Jan Granacher</div>
+              <div className="bio-subtitle mt-4 mb-6 text-center" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '0.95rem' }}>A few things about me:</div>
+              <ul className="bio-list" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '0.95rem', margin: '0 auto 1.5em auto', listStyleType: 'disc', maxWidth: '100%', textAlign: 'left', paddingLeft: 18 }}>
+                <li>Grew up in Germany.</li>
+                <li>Went to UWC Atlantic in Wales.</li>
+                <li>Now study economics at Harvard.</li>
+                <li>Co-founded <a href="https://waive.live" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">wAIve LLC</a>.</li>
+                <li>Worked on DPO Curation at <a href="https://bfl.ai/" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">Black Forest Labs</a> and helped with <a href="https://bfl.ai/announcements/25-01-16-finetuning" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">this</a>.</li>
+                <li>Researched the semiconductor industry for <a href="https://www.asm.com/" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">ASMI</a>.</li>
+                <li>I also enjoy running, impressionist art and books.</li>
               </ul>
             </div>
           </RevealOnScroll>
