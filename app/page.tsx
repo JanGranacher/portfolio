@@ -11,14 +11,14 @@ export default function Home() {
     <>
       <div className="min-h-screen flex flex-col items-center justify-between" style={{ background: '#fff' }}>
         <NavMenu />
-        <div style={{ width: '100%', maxWidth: 500, margin: '0 auto', padding: '32px 16px 0 16px' }}>
+        <div className="flex flex-1 flex-col items-center justify-center w-full" style={{ minHeight: '70vh' }}>
           <RevealOnScroll>
             <div id="bio" className="mb-8">
               <div className="mb-16 text-center" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '2.5rem' }}>Jan Granacher</div>
-              <div className="mt-8 mb-8 text-center" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '1rem' }}>
+              <div className="mt-8 mb-8 text-center" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '0.85rem' }}>
                 A few things about me:
               </div>
-              <ul style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '1rem', margin: '0 auto 2em auto', listStyleType: 'disc', maxWidth: 400, textAlign: 'left' }} className="text-center">
+              <ul style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '0.85rem', margin: '0 auto 2em auto', listStyleType: 'disc', maxWidth: 400, textAlign: 'left' }} className="text-center">
                 <li className="mb-3">Grew up in Germany.</li>
                 <li className="mb-3">Went to UWC Atlantic in Wales.</li>
                 <li className="mb-3">Now study economics at Harvard.</li>
@@ -30,7 +30,7 @@ export default function Home() {
             </div>
           </RevealOnScroll>
         </div>
-        <div className="w-full text-center mt-8 mb-8" style={{ color: '#000', fontFamily: 'Georgia, serif', fontWeight: 500, fontSize: '1rem' }}>
+        <div className="w-full text-center mt-8 mb-8" style={{ color: '#000', fontFamily: 'Georgia, serif', fontWeight: 500, fontSize: '0.75rem' }}>
           jangranacher@college.harvard.edu
         </div>
       </div>
