@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <div className="min-h-screen flex flex-col items-center justify-between" style={{ background: '#fff' }}>
         <NavMenu />
-        <div className="flex flex-1 flex-col items-center w-full px-2" style={{ minHeight: '60vh' }}>
+        <div className="flex flex-1 flex-col items-center w-full px-2 mt-32" style={{ minHeight: '60vh' }}>
           <style jsx>{`
             @media (max-width: 600px) {
               .bio-header { font-size: 1.5rem !important; margin-bottom: 1.5rem !important; }
