@@ -11,17 +11,18 @@ export default function Home() {
     <>
       <div className="min-h-screen flex flex-col items-center justify-between" style={{ background: '#fff' }}>
         <NavMenu />
-        <div className="flex flex-1 flex-col items-center w-full px-2 mt-32" style={{ minHeight: '60vh' }}>
+        <div className="flex flex-1 flex-col items-center w-full px-2 mt-32" style={{ minHeight: '60vh', paddingLeft: 12, paddingRight: 12 }}>
           <style jsx>{`
             @media (max-width: 600px) {
               .bio-header { font-size: 1.5rem !important; margin-bottom: 1.5rem !important; }
               .bio-subtitle { font-size: 0.95rem !important; margin-bottom: 1rem !important; margin-top: 0.5rem !important; }
               .bio-list { font-size: 0.95rem !important; padding-left: 1.1em !important; }
               .bio-list li { margin-bottom: 0.7em !important; }
+              .mobile-padding { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
             }
           `}</style>
           <RevealOnScroll>
-            <div id="bio" className="mb-8" style={{ width: '100%', maxWidth: 400, margin: '0 auto' }}>
+            <div id="bio" className="mb-8 mobile-padding" style={{ width: '100%', maxWidth: 400, margin: '0 auto' }}>
               <div className="mb-24 text-center bio-header" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '2.2rem', lineHeight: 1.1 }}>Jan Granacher</div>
               <div className="mt-12 mb-6 text-center bio-subtitle" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '0.95rem' }}>A few things about me:</div>
               <ul className="bio-list" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '0.95rem', margin: '0 auto 1.5em auto', listStyleType: 'disc', maxWidth: '100%', textAlign: 'left', paddingLeft: 18 }}>
@@ -30,7 +31,7 @@ export default function Home() {
                 <li>Now study economics at Harvard.</li>
                 <li>Co-founded <a href="https://waive.live" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">wAIve LLC</a>.</li>
                 <li>Worked on DPO Curation at <a href="https://bfl.ai/" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">Black Forest Labs</a> and helped with <a href="https://bfl.ai/announcements/25-01-16-finetuning" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">this</a>.</li>
-                <li>Researched the semiconductor industry for <a href="https://www.asm.com/" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">ASMI</a>.</li>
+                <li>Stint at <a href="https://www.asm.com/" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">ASMI</a>.</li>
                 <li>I also enjoy running, impressionist art and books.</li>
               </ul>
             </div>
