@@ -22,8 +22,8 @@ export default function Home() {
           `}</style>
           <RevealOnScroll>
             <div id="bio" className="mb-8" style={{ width: '100%', maxWidth: 400, margin: '0 auto' }}>
-              <div className="bio-header mb-10 text-center" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '2.2rem', lineHeight: 1.1 }}>Jan Granacher</div>
-              <div className="bio-subtitle mt-4 mb-6 text-center" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '0.95rem' }}>A few things about me:</div>
+              <div className="mb-24 text-center bio-header" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '2.2rem', lineHeight: 1.1 }}>Jan Granacher</div>
+              <div className="mt-12 mb-6 text-center bio-subtitle" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '0.95rem' }}>A few things about me:</div>
               <ul className="bio-list" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '0.95rem', margin: '0 auto 1.5em auto', listStyleType: 'disc', maxWidth: '100%', textAlign: 'left', paddingLeft: 18 }}>
                 <li>Grew up in Germany.</li>
                 <li>Went to UWC Atlantic in Wales.</li>
