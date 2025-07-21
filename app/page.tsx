@@ -9,28 +9,30 @@ import './page.css'
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen flex justify-center" style={{ background: '#fff' }}>
+      <div className="min-h-screen flex flex-col items-center justify-between" style={{ background: '#fff' }}>
         <NavMenu />
-        <RevealOnScroll>
-          <div id="bio" className="mb-8" style={{ width: '100%', maxWidth: '700px', margin: '0 auto', padding: '48px 0 0 0' }}>
-            <div className="mb-8 text-left" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '2.5rem' }}>Jan Granacher</div>
-            <div className="mb-8 text-left" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '1rem' }}>
-              A few things about me:
+        <div style={{ width: '100%', maxWidth: 500, margin: '0 auto', padding: '32px 16px 0 16px' }}>
+          <RevealOnScroll>
+            <div id="bio" className="mb-8">
+              <div className="mb-16 text-center" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '2.5rem' }}>Jan Granacher</div>
+              <div className="mt-8 mb-8 text-center" style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '1rem' }}>
+                A few things about me:
+              </div>
+              <ul style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '1rem', margin: '0 auto 2em auto', listStyleType: 'disc', maxWidth: 400, textAlign: 'left' }} className="text-center">
+                <li className="mb-3">Grew up in Germany.</li>
+                <li className="mb-3">Went to UWC Atlantic in Wales.</li>
+                <li className="mb-3">Now study economics at Harvard.</li>
+                <li className="mb-3">Co-founded <a href="https://waive.live" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">wAIve LLC</a>.</li>
+                <li className="mb-3">Worked on DPO Curation at <a href="https://bfl.ai/" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">Black Forest Labs</a> and helped with <a href="https://bfl.ai/announcements/25-01-16-finetuning" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">this</a>.</li>
+                <li className="mb-3">Researched the semiconductor industry for <a href="https://www.asm.com/" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">ASMI</a>.</li>
+                <li className="mb-3">I also enjoy running, impressionist art and books.</li>
+              </ul>
             </div>
-            <ul style={{ fontFamily: 'Georgia, serif', fontWeight: 500, color: '#000', fontSize: '1rem', marginLeft: '1.5em', marginBottom: '2em', listStyleType: 'disc' }}>
-              <li className="mb-3">Grew up in Germany.</li>
-              <li className="mb-3">Went to UWC Atlantic in Wales.</li>
-              <li className="mb-3">Now study economics at Harvard.</li>
-              <li className="mb-3">Co-founded <a href="https://waive.live" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">wAIve LLC</a>.</li>
-              <li className="mb-3">Worked on DPO Curation at <a href="https://bfl.ai/" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">Black Forest Labs</a> and helped with <a href="https://bfl.ai/announcements/25-01-16-finetuning" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">this</a>.</li>
-              <li className="mb-3">Researched the semiconductor industry for <a href="https://www.asm.com/" style={{ color: '#000', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">ASMI</a>.</li>
-              <li className="mb-3">I also enjoy running, impressionist art and books.</li>
-            </ul>
-          </div>
-        </RevealOnScroll>
-      </div>
-      <div className="w-full text-center mt-8 mb-8" style={{ color: '#000', fontFamily: 'Georgia, serif', fontWeight: 500, fontSize: '1rem', position: 'absolute', left: 0, right: 0, bottom: 0 }}>
-        jangranacher@college.harvard.edu
+          </RevealOnScroll>
+        </div>
+        <div className="w-full text-center mt-8 mb-8" style={{ color: '#000', fontFamily: 'Georgia, serif', fontWeight: 500, fontSize: '1rem' }}>
+          jangranacher@college.harvard.edu
+        </div>
       </div>
     </>
   )
@@ -129,9 +131,7 @@ function NavMenu() {
         style={{ background: 'none', border: 'none', padding: 0 }}
       >
         {!open ? (
-          <span className="block">
-            <img src="/png-great-gatsby-hat-logo.png" alt="JG Monogram Logo" style={{ width: 56, height: 56, borderRadius: '50%', display: 'block', objectFit: 'cover' }} />
-          </span>
+          null
         ) : (
           <span className="px-4 py-2 rounded-full bg-white border border-gray-300 shadow font-bold text-[1.1rem] text-black transition-all duration-300" style={{ fontFamily: 'Baskerville, Georgia, serif', letterSpacing: '0.01em' }}>
             J. Granacher
