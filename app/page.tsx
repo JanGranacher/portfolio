@@ -14,8 +14,8 @@ export default function Home() {
         <div className="flex flex-1 flex-col items-center w-full px-2 mt-32" style={{ minHeight: '60vh', paddingLeft: 12, paddingRight: 12 }}>
           <style jsx>{`
             @media (max-width: 600px) {
-              .bio-header { font-size: 1.2rem !important; margin-bottom: 1.5rem !important; }
-              .bio-subtitle { font-size: 0.85rem !important; margin-bottom: 1rem !important; margin-top: 0.5rem !important; }
+              .bio-header { font-size: 1.2rem !important; margin-bottom: 4rem !important; }
+              .bio-subtitle { font-size: 0.85rem !important; margin-bottom: 1rem !important; margin-top: 2.5rem !important; }
               .bio-list { font-size: 0.85rem !important; padding-left: 1.1em !important; }
               .bio-list li { margin-bottom: 0.7em !important; }
               .mobile-padding { padding-left: 2rem !important; padding-right: 2rem !important; }
